@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "alias": "judo.ivosantiago.com",
+    "name": "judo",
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/static-build"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*).(js|css)(.*)",
+            "dest": "/(.*).(js|css)(.*)"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
+        }
+    ]
+}
